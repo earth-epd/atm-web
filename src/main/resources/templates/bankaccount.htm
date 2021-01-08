@@ -5,13 +5,13 @@
 
 <div class="container" layout:fragment="content">
     <h1>Open Bank Account</h1>
-    <form th:action="@{/bankAccount}" method="POST">
+    <form th:action="@{/bankaccount}" method="POST">
         <div class="form-group">
             <label for="inputId">Id</label>
             <input type="input" class="form-control" name= "id" id="inputId">
         </div>
 
-        <div class="forn-group">
+        <div class="form-group">
             <label for="inputCustomerId">CustomerId</label>
             <input type="input" class="form-control" name="id" id="inputCustomerId">
         </div>
@@ -43,11 +43,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="bankAccount:${allBankAccounts}">
-            <td th:text="${bankAccount.id}"></td>
-            <td th:text="${bankAccount.customerId}"></td>
-            <td th:text="${bankAccount.type}"></td>
-            <td th:text="${bankAccount.balance}"></td>
+        <tr th:each="bankaccount:${allBankAccounts}">
+            <td th:text="${bankaccount.id}"></td>
+            <td th:text="${bankaccount.customerId}"></td>
+            <td th:text="${bankaccount.type}"></td>
+            <td th:text="${bankaccount.balance}"></td>
         </tr>
         </tbody>
     </table>

@@ -10,7 +10,7 @@ import th.ac.ku.atm.model.BankAccount;
 import th.ac.ku.atm.service.BankAccountService;
 
 @Controller
-@RequestMapping("/bankAccount")
+@RequestMapping("/bankaccount")
 public class BankAccountController {
 
     private BankAccountService bankAccountService;
@@ -21,13 +21,14 @@ public class BankAccountController {
 
     @GetMapping
     public String getBankAccountPage(){
-        return "bankAccount";
+        return "bankaccount";
     }
 
     @PostMapping
     public String bankAccount(@ModelAttribute BankAccount bankAccount, Model model){
         BankAccount bankAccount1 = bankAccountService.checkId(bankAccount);
         model.addAttribute("allBankAccounts", bankAccountService.getBankAccount());
-        return "redirect:bankAccount";
+        return "redirect:bankaccount";
     }
 }
+
