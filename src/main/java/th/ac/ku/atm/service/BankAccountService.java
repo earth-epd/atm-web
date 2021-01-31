@@ -32,6 +32,13 @@ public class BankAccountService {
         return Arrays.asList(accounts);
     }
 
+    public void editBankAccount(BankAccount bankAccount) {
+        String url = "http://localhost:8091/api/bankaccount/" +
+                bankAccount.getId();
+        restTemplate.put(url, bankAccount);
+    }
+
+
     public List<BankAccount> getBankAccounts() {
         String url = "http://localhost:8091/api/bankaccount/";
 
@@ -49,6 +56,9 @@ public class BankAccountService {
         restTemplate.postForObject(url, bankAccount, BankAccount.class);
     }
 
+    public BankAccount getBankAccount(int id) {
+        return null;
+    }
 
 
 //    @PostConstruct
