@@ -48,7 +48,7 @@ public class BankAccountController {
         model.addAttribute("bankaccounts",accountService.getBankAccounts());
         return "redirect:bankaccount";
     }
-    
+
 }
 
 
