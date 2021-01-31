@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+      xmlns:th="https://www.thymeleaf.org">
+
+<div class="container"  layout:fragment="content">
+
+    <h1 th:text="${customertitle}"></h1>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Type</th>
+            <th>Balance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="account : ${bankaccounts}">
+            <td th:text="${account.type}"></td>
+            <td th:text="${account.balance}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

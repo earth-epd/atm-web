@@ -24,11 +24,5 @@ public class BankAccountController {
         return "bankaccount";
     }
 
-    @PostMapping
-    public String bankAccount(@ModelAttribute BankAccount bankAccount, Model model){
-        BankAccount bankAccount1 = bankAccountService.checkId(bankAccount);
-        model.addAttribute("allBankAccounts", bankAccountService.getBankAccount());
-        return "redirect:bankaccount";
-    }
 }
 
